@@ -8,10 +8,14 @@ router.get('/', function(req, res){
 
 //endpoint template
 
-router.route('/testPost').post((res,req) => {
+router.route('/testPost').post((req,res) => {
+    console.log(req.body);
+    res.send({success: "nice"});
     //model.save((err) => {
     //  res.send('success');
     // })
 });
+
+
 
 module.exports = router;
